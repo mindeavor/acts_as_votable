@@ -61,7 +61,7 @@ class Voter < ActiveRecord::Base
 end
 
 class NotVoter < ActiveRecord::Base
-  
+
 end
 
 class StiVoter < Voter

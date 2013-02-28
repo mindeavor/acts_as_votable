@@ -6,13 +6,13 @@ module ActsAsVotable
     include Helpers::Words
 
     def self.included base
- 
-      # allow the user to define these himself 
+
+      # allow the user to define these himself
       aliases = {
 
         :vote_up => [
-          :up_by, :upvote_by, :like_by, :liked_by, :vote_by, 
-          :up_from, :upvote_from, :upvote_by, :like_from, :liked_from, :vote_from 
+          :up_by, :upvote_by, :like_by, :liked_by, :vote_by,
+          :up_from, :upvote_from, :upvote_by, :like_from, :liked_from, :vote_from
         ],
 
         :vote_down => [

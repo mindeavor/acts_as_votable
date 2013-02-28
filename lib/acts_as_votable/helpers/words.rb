@@ -1,9 +1,9 @@
 module ActsAsVotable::Helpers
 
-  # this helper provides methods that help find what words are 
+  # this helper provides methods that help find what words are
   # up votes and what words are down votes
   #
-  # It can be called 
+  # It can be called
   #
   # votable_object.votable_words.that_mean_true
   #
