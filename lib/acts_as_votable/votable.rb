@@ -27,7 +27,7 @@ module ActsAsVotable
         :down_votes => [
           :false_votes, :downs, :downvotes, :dislikes, :negatives
         ],
-        :unvote => [
+        :unvote_by => [
           :unliked_by, :undisliked_by
         ]
       }
@@ -122,12 +122,18 @@ module ActsAsVotable
       return true
     end
 
+    # helper methods
+
     def vote_up voter, options={}
       self.vote :voter => voter, :vote => true, :vote_scope => options[:vote_scope]
     end
 
     def vote_down voter, options={}
       self.vote :voter => voter, :vote => false, :vote_scope => options[:vote_scope]
+    end
+
+    def unvote_by(voter, options={})
+      self.unvote :voter => voter, :vote_scope => options[:vote_scope]
     end
 
     # caching
